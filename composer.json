@@ -1,0 +1,20 @@
+{
+    "name": "yaaaaaaaaaaaaaao/jhpay",
+    "description": "几何支付",
+    "type": "library",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yaaaaaaaaaaaaaao\\Jhpay\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yao",
+            "email": "736849829@qq.com"
+        }
+    ]
+}
