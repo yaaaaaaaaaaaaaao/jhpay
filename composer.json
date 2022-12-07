@@ -1,5 +1,5 @@
 {
-    "name": "yaaaaaaaaaaaaaao/jhpay",
+    "name": "suixiang/jhpay",
     "description": "几何支付",
     "type": "library",
     "require": {
@@ -8,7 +8,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Yaaaaaaaaaaaaaao\\Jhpay\\": "src/"
+            "Suixiang\\Jhpay\\": "src/"
         }
     },
     "authors": [
