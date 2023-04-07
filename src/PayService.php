@@ -34,6 +34,7 @@ class PayService
      * @param $data['order_sn']   订单号（不能重复）必填
      * @param $data['notify_url'] 异步通知地址      必填
      * @param $data['subject']    说明             可选
+     * @param $data['remarks']    备注             可选
      * @return string
      */
     public function payAlipayQr($data){
@@ -42,6 +43,7 @@ class PayService
             'payWay' =>'ALIPAY_QR',
             'scene' =>'offline',
             'subject' =>isset($data['subject']) ? $data['subject'] : '购买商品',
+            'remarks' =>isset($data['remarks']) ? $data['remarks'] : '购买商品',
             'amount' =>$data['price'],
             'notify_url' =>$data['notify_url'],
             'return_url' =>$data['notify_url'],
@@ -68,6 +70,7 @@ class PayService
      * @param $data['order_sn']     订单号（不能重复）必填
      * @param $data['notify_url']   异步通知地址      必填
      * @param $data['subject']      说明             可选
+     * @param $data['remarks']      备注             可选
      * @return json
      */
     public function payWechat($data){
@@ -76,6 +79,7 @@ class PayService
             'payWay' =>'WECHAT',
             'scene' =>'offline',
             'subject' =>isset($data['subject']) ? $data['subject'] : '购买商品',
+            'remarks' =>isset($data['remarks']) ? $data['remarks'] : '购买商品',
             'amount' =>$data['price'],
             'notify_url' =>$data['notify_url'],
             'return_url' =>$data['notify_url'],
@@ -105,6 +109,7 @@ class PayService
      * @param $data['order_sn']     订单号（不能重复）必填
      * @param $data['notify_url']   异步通知地址      必填
      * @param $data['subject']      说明             可选
+     * @param $data['remarks']      备注             可选
      * @return json
      */
     public function payRoutine($data){
@@ -113,6 +118,7 @@ class PayService
             'payWay' =>'WECHAT_MINI',
             'scene' =>'offline',
             'subject' =>isset($data['subject']) ? $data['subject'] : '购买商品',
+            'remarks' =>isset($data['remarks']) ? $data['remarks'] : '购买商品',
             'amount' =>$data['price'],
             'notify_url' =>$data['notify_url'],
             'return_url' =>$data['notify_url'],
@@ -182,6 +188,7 @@ class PayService
      * @param $data['order_sn']     订单号（不能重复）必填
      * @param $data['notify_url']   异步通知地址      必填
      * @param $data['subject']      说明             可选
+     * @param $data['remarks']      备注             可选
      * @return json
      */
     public function payOnekeyPay($data){
@@ -190,6 +197,7 @@ class PayService
             'payWay' =>'ONEKEYPAY',
             'scene' =>'offline',
             'subject' =>isset($data['subject']) ? $data['subject'] : '购买商品',
+            'remarks' =>isset($data['remarks']) ? $data['remarks'] : '购买商品',
             'amount' =>$data['price'],
             'notify_url' =>$data['notify_url'],
             'return_url' =>$data['notify_url'],
